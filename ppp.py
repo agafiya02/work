@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
@@ -40,6 +40,11 @@ def list_prof(list1):
 @app.route('/auto_answer')
 def answer():
     return render_template('auto_answer.html')
+
+
+@app.route('/astronaut_selection')
+def astronaut_selection():
+    return render_template('astronaut.html', proff=proff)
 
 
 if __name__ == '__main__':
