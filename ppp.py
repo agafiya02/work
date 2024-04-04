@@ -47,9 +47,9 @@ def astronaut_selection():
     return render_template('astronaut.html', proff=proff)
 
 
-@app.route('/carousel')
-def carousel():
-    return render_template('carousel.html')
+@app.route('/choice/<planet_name>')
+def carousel(planet_name):
+    return render_template('choice.html', planet_name=planet_name)
 
 
 if __name__ == '__main__':
