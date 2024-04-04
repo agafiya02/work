@@ -57,5 +57,15 @@ def results(nickname, level, rating):
     return render_template('results.html', nickname=nickname, level=level, rating=rating)
 
 
+@app.route('/load_photo', methods=['POST', 'GET'])
+def photo():
+    if request.method == 'GET':
+        return render_template('photo.html')
+    elif request.method == 'POST':
+        f = request.files['file']
+        print(f.read())
+        return "Форма отправлена"
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
