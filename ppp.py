@@ -52,5 +52,10 @@ def carousel(planet_name):
     return render_template('choice.html', planet_name=planet_name)
 
 
+@app.route('/results/<nickname>/<int:level>/<float:rating>')
+def results(nickname, level, rating):
+    return render_template('results.html', nickname=nickname, level=level, rating=rating)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
