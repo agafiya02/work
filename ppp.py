@@ -48,7 +48,7 @@ def astronaut_selection():
 
 
 @app.route('/choice/<planet_name>')
-def carousel(planet_name):
+def choice(planet_name):
     return render_template('choice.html', planet_name=planet_name)
 
 
@@ -65,6 +65,11 @@ def photo():
         f = request.files['file']
         print(f.read())
         return "Форма отправлена"
+
+
+@app.route('/carousel')
+def carousel():
+    return render_template('carousel.html')
 
 
 if __name__ == '__main__':
