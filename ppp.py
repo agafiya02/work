@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
+import random
 
 app = Flask(__name__)
 
@@ -18,6 +19,27 @@ proff = ['инженер-исследователь',
          'киберинженер',
          'штурман',
          'пилот дронов']
+
+name = [
+    {
+        "name": "Энди",
+        "surname": "Уир",
+        "photo": "static/img/pers1.png",
+        "specialties": "астрогеолог, специалист по радиационной защите"
+    },
+    {
+        "name": "Марк",
+        "surname": "Уаер",
+        "photo": "static/img/pers2.png",
+        "specialties": "пилот, специалист в своей сфере"
+    },
+    {
+        "name": "Джейсон",
+        "surname": "Браер",
+        "photo": "static/img/pers3.png",
+        "specialties": "врач, отличный врач!"
+    }
+]
 
 
 @app.route('/<title>')
@@ -75,6 +97,12 @@ def carousel():
 @app.route('/login')
 def login():
     return render_template('login_form.html')
+
+
+@app.route('/member')
+def member():
+    number = random.randint(0, 2)
+    return render_template('member.html', name=name, number=number)
 
 
 if __name__ == '__main__':
