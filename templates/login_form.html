@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row no-gutters">
+    <div class="col-5 col-md-2">
+        <img src="static/img/MARS.png" alt="">
+    </div>
+    <div class="col-6 col-md-4">
+        <h4>Аварийный доступ</h4>
+    </div>
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">id астронавта</label>
+      <input type="text" class="form-control" id="formGroupExampleInput1">
+</div>
+<div>
+    <label for="inputPassword1" class="form-label">Пароль</label>
+    <input type="password" class="form-control" id="inputPassword1">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlInput" class="form-label">id капитана</label>
+    <input type="text" class="form-control" id="formGroupExampleInput">
+</div>
+<div>
+    <label for="inputPassword2" class="form-label">Пароль капитана</label>
+    <input type="password" class="form-control" id="inputPassword2">
+</div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Доступ</button>
+  </div>
+
+
+{% endblock %}
