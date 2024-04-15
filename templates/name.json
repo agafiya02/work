@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Энди",
+    "surname": "Уир",
+    "photo": "static/img/pers1.png",
+    "specialties": "астрогеолог, специалист по радиационной защите"
+  },
+  {
+    "name": "Марк",
+    "surname": "Уаер",
+    "photo": "static/img/pers2.png",
+    "specialties": "пилот, специалист в своей сфере"
+  },
+  {
+    "name": "Джейсон",
+    "surname": "Браер",
+    "photo": "static/img/pers3.png",
+    "specialties": "врач, отличный врач!"
+  }
+]

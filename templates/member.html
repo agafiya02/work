@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-3">
+        <div class="row no-gutters">
+            <div class="col-5 col-md-3">
+                <h4> {{ name[number]["name"] }}</h4>
+            </div>
+            <div class="col-6 col-md-2">
+                <h4> {{ name[number]["surname"] }}</h4>
+            </div>
+        </div>
+        <img width="200" height="300" src={{ name[number]["photo"] }}>
+
+       <h4>{{ name[number]["specialties"] }}</h4>
+    </div>
+</div>
+
+{% endblock %}
