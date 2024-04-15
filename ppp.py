@@ -72,5 +72,10 @@ def carousel():
     return render_template('carousel.html')
 
 
+@app.route('/login')
+def login():
+    return render_template('login_form.html')
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
